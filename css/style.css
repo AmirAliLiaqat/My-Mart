@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --blue: #0dcaf0;
+    --gray: #ccc;
+    --red: #dc3545;
+    --orange: #e93700;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* Typography *******************/
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+.user_detail_tr{
+    border-bottom: 2px solid var(--white);
+}
+.user_detail_td{
+    padding: 10px;
+    padding-left: 0px;
+}
+.admin_panel{
+    font-style: italic;
+    background-image: url(..../images/bg.jpg);
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: var(--orange) !important;
+    border: none !important;
+}
+.btn-primary:hover{
+    background-color: #b14751 !important;
+}
+.btn-outline-primary{
+    border: 1px solid var(--orange) !important;
+    color: var(--white) !important;
+}
+.btn-outline-primary:hover{
+    background-color: var(--orange) !important;
+}
+.navbar-brand img{
+    width: 100px;
+    height: 70px;
+}
+.nav-link{
+    color: var(--white) !important;
+}
+.nav-link:hover{
+    color: var(--orange) !important;
+}
+.message{
+    width: 100%;
+    padding: 20px;
+    background: var(--white);
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+.message > i{
+    cursor: pointer;
+}
+.form-box{
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    border-radius: 15px;
+}
+.form-col{
+    overflow: hidden;
+}
+.form-btn{
+    border-radius: 20px !important;
+}
+.banner{
+    min-height: 30vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.7)), url(../images/banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    background-color: var(--orange);
+}
+
+/******************* Dashboard Css *******************/
+/* .sale_box{
+    border-radius: 10px;
+    top: 0; left: 0;
+    position: absolute;
+} */
+#admin-menu{
+    background-color: var(--orange);
+    padding: 20px 10px;
+    min-height: 700px;
+}
+.menu-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#admin-menu .menu-list li a {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+#admin-menu .menu-list li.active a, #admin-menu .menu-list li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/******************* Products Css *******************/
+.products_container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.add_items_div, .dashboard_div, .search_div{
+    border-radius: 10px;
+}
+.products_container .row .dashboard_div{
+    border: 1px solid var(--black);
+    overflow: hidden;
+    cursor: pointer;
+}
+.products_container .row .dashboard_div img, .products_container .row .search_div img{
+    height: 300px;
+    object-fit: cover;
+    transition: 0.2s linear;
+}
+.products_container .row .dashboard_div:hover img, .products_container .row .search_div:hover img{
+    transform: scale(1.1);
+}
+.products_container .row .dashboard_div .title, .products_container .row .search_div .title{
+    font-size: 1.5rem;
+}
+.products_container .row .dashboard_div .price, .products_container .row .search_div .price{
+    font-size: 2.4rem;
+    color: var(--red);
+}
+
+/******************* About Css ************************/
+.team_container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.team_container .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.team_container .card .main_img{
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--gray);
+}
+.team_container .card:hover .main_img, .team_container .card .content{
+    display: none;
+}
+.team_container .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.team_container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+    display: block;
+}
+.team_container .card .content img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+.team_container .card .content h3{
+    font-size: 1.8em;
+    color: var(--white);
+    z-index: 1;
+}
+.team_container .card .content p{
+    color: var(--white);
+    font-size: 1em;
+    font-weight: 300;
+}
+.team_container .card .content .social_links{
+    margin: 10px 0;
+}
+.team_container .card .content .social_links i{
+    font-size: 36px;
+    color: var(--white);
+    margin: 0 5px;
+}
+.team_container .card .content .social_links i:hover{
+    color: var(--black);
+}
+.team_container .card .content .btn{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.team_container .card .content .btn:hover{
+    background: var(--black);
+    color: var(--white);
+}
+
+/******************* Contact Css ************************/
+.contact_container .contact_div, .contact_container .map_div {
+    width: 100%;
+    margin: 0 10px;
+}
+.contact_container .contact_div .row .top_input label{
+   margin-left: 10px !important;
+}
+.contact_container .input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+.contact_container input, .contact_container textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background: transparent;
+    font-size: 15px;
+}
+.contact_container label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: var(--white);
+    cursor: text;
+    transition: 0.2s;
+}
+.contact_container .submit_btn{
+    padding: 10px 0;
+    outline: none;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.contact_container .submit_btn:hover{
+    color: var(--black);
+    background: var(--white);
+    transform: scale(1.1);
+}
+.contact_container input:focus~label,
+.contact_container input:valid~label
+.contact_container textarea:focus~label,
+.contact_container textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+.contact_container .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact_container .row .input-group{
+    flex-basis: 48%;
+}
+
+/******************* Media Query Css ************************/
+@media (max-width: 768px) {
+    .products_container .popup-image img{
+        width: 95%;
+    }
+}
